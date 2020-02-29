@@ -1,0 +1,31 @@
+一些python，random的方法，和实际的使用
+
+382,398 中使用了random.random(), 它能随机生成0-1之间的任意浮点数
+
+380.由于我们是需要把一个数组里的元素随机的抽取出来，
+   所以我们要用random.randint(x,y),能随机生成[x,y]内的一个int
+
+381. 这里用了一个collection.defaultdict(数据类型)
+
+     1.假如说 defaultdict[key],这个key不存在的时候，它不会报错，会返回一个默认的数据类型（我们刚刚设置的）
+     2.有了默认的数据类型，我们可以直接使用这个数据类型的添加方法来进行元素的添加
+       例如：collection.defaultdict(list)   a[key].append(what)
+            collection.defaultdict(set)    a[key].add(what)
+       从这道题来讲，能从在一定程度下省下一些代码量，因为你不用在加第一个元素的时候，先判断[],set，有没有创建
+
+     3. >>> a[1].append(1)
+        >>> a[1].append(2)
+        >>> a[1].append(3)
+        >>> a
+        defaultdict(<class 'list'>, {1: [1, 2, 3]})
+        >>> a
+        defaultdict(<class 'list'>, {1: [1, 2, 3]})
+        >>> a[1].pop()
+        3（默认还是pop出a[1]的最后一个元素）
+
+
+      一些关于set的方法
+      set.discard(value)
+      discard() 方法用于移除指定的集合元素。
+      该方法不同于 remove() 方法，因为 remove() 方法在移除一个不存在的元素时会发生错误，而 discard() 方法不会。
+

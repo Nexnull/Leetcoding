@@ -1,0 +1,24 @@
+>>> "" == False
+False
+>>> "" is None
+False
+>>> "" == None
+False
+------------------------------
+>>> [] == None
+False
+>>> [] is None
+False
+>>> [] == False
+False
+------------------------------
+>>> None == False
+False
+
+>>> not ""
+True
+
+>>> not []
+True
+
+所以我的总结是，判断是否为空字符串，空列表，用not
