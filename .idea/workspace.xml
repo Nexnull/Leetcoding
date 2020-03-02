@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee4bcccc-24fc-4e26-b1cc-9abecaf195ff" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/leetcode/DP/多维状态DP问题/337.House Robber III(树状递归).py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/Array/41. 第一个缺失的正整数.py" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/Array/41. 第一个缺失的正整数.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/Array/42. Trapping Rain Water.py" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/Array/42. Trapping Rain Water.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/Matrix/48. Rotate Image.py" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/Matrix/48. Rotate Image.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/hashtable/49. Group Anagrams(变位词).py" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/hashtable/49. Group Anagrams(变位词).py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -362,7 +362,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

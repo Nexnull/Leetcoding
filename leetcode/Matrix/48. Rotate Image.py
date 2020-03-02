@@ -26,6 +26,22 @@ class Solution(object):
 """
 注意，python 的reverse是inplace的
 https://leetcode.com/problems/rotate-image/discuss/18872/A-common-method-to-rotate-the-image
+
+这里的一个trick, 关于for循环的
+for i in range(len(matrix)):
+    for j in range(i,len(matrix[0])):
+这样写其实遍历的是对称轴右半边的
+   1 2 3 
+   0 5 6 
+   0 0 9 
+
+for i in range(len(matrix)):
+    for j in range(i+1,len(matrix[0])):
+这样写的话能直接排除掉中轴上的，能节省一般的位置
+   0 2 3 
+   0 0 6 
+   0 0 0 
+
 /*
  * clockwise rotate(顺时针旋转90度的方法)
  * first reverse up to down, then swap the symmetry 

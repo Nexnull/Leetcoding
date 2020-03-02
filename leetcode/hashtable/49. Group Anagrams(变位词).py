@@ -34,11 +34,11 @@ class Solution(object):
         word.sort()
         return "".join(word)
 
-    def getkeybyCount(self,word):
-        res = [0]*26
-        for char in word:
-            res[ord(char) - ord("a")] += 1
-        return tuple(res)
+    # def getkeybyCount(self,word):
+    #     res = [0]*26
+    #     for char in word:
+    #         res[ord(char) - ord("a")] += 1
+    #     return tuple(res)
 
 
 """   
