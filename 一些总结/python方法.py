@@ -1,5 +1,26 @@
 
 
+
+#some python tricky
+
+#56. 按照要求来排序列表里的列表
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#=============================================
 lambda:
 
 语法形式：lambda argument_list: expression

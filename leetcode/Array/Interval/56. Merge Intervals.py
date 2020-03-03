@@ -17,8 +17,10 @@ class Solution(object):
         intervals.sort(key = lambda x: x[0])
         merge = []
         for interval in intervals:
+            #    []  or  [1,3] [4,5]
             if not merge or merge[-1][-1] < interval[0]:
                 merge.append(interval)
+            # [1,3] [2,4]
             else:
                 merge[-1][-1] = max(merge[-1][-1],interval[-1])
         return merge

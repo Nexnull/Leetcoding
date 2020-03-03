@@ -20,16 +20,25 @@ class Solution(object):
         :type nums: List[int]
         :rtype: bool
         """
-        if nums is None or len(nums) == 0: return False
+        if not nums:
+            return False
 
-        n = len(nums)
-        max = 0
-        for i in range(n):
-            if max >= n-1: return True
-            if i > max: return False
-            max = max(max,i+nums[i])
+        maxjump = 0
+        terminal = len(nums) - 1
 
+        for i in range(len(nums)):
+            #我们的行动范围不能大于 最大跳跃距离，如果超过了就错了
+            if i > maxjump:
+                break
+            # 假如说当前位置+能跳的距离 大于 最大跳跃距离， 那么我们更新最大跳跃距离
+            if i + nums[i] > maxjump:
+                maxjump = i + nums[i]
 
+            # 假如我们当前位置+跳跃距离 >= 最后的位置，说明我们可以完成任务
+            if i + nums[i] >= terminal:
+                return True
+
+        #假如我们所有步骤都走完了，还是没有完成任务，说明完不成任务
         return False
 
 """

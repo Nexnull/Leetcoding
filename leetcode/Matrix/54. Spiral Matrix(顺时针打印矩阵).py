@@ -11,38 +11,41 @@ Input:
 ]
 Output: [1,2,3,6,9,8,7,4,5]
 """
-class Solution:
-    # matrix类型为二维列表，需要返回列表
-    def printMatrix(self, matrix):
-        if matrix is None or len(matrix) == 0 or matrix[0] is None or len(matrix[0]) == 0:
+class Solution(object):
+    def spiralOrder(self, matrix):
+        """
+        :type matrix: List[List[int]]
+        :rtype: List[int]
+        """
+        if not matrix:
             return []
 
         res = []
-        top = 0
-        bottom = len(matrix) - 1
         left = 0
-        right = len(matrix[0])-1
-        while True:
+        right = len(matrix[0]) - 1
+        up = 0
+        down = len(matrix) - 1
 
-            for i in range(left,right+1):
-                res.append(matrix[top][i])
-            top += 1
-            if top > bottom:
+        while True:
+            for i in range(left, right + 1):
+                res.append(matrix[up][i])
+            up += 1
+            if up > down:
                 break
 
-            for i in range(top,bottom+1):
+            for i in range(up, down + 1):
                 res.append(matrix[i][right])
             right -= 1
-            if right < left:
+            if left > right:
                 break
 
-            for i in range(right,left-1,-1):
-                res.append((matrix[bottom][i]))
-            bottom -= 1
-            if bottom < top:
+            for i in range(right, left - 1, -1):
+                res.append(matrix[down][i])
+            down -= 1
+            if up > down:
                 break
 
-            for i in range(bottom,top-1,-1):
+            for i in range(down, up - 1, -1):
                 res.append(matrix[i][left])
             left += 1
             if left > right:

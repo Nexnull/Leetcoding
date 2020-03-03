@@ -4,8 +4,8 @@ class Solution:
     #1
     def FindGreatestSumOfSubArray(self, array):
         cursum = maxsum = array[0]
-        for i in array[1:]:
-            cursum = max(cursum, cursum + i)
+        for num in array[1:]:
+            cursum = max(cursum, cursum + num)
             maxsum = max(cursum, maxsum)
         return maxsum
 
@@ -16,10 +16,15 @@ class Solution:
         :rtype: int
         """
         cursum = maxsum = array[0]
-        for i in array[1:]:
-            if cursum <= 0:cursum = i
-            else: cursum += i
-            maxsum = max(cursum, maxsum)
+        for num in array[1:]:
+#假如说你的cursum已经小于0了，那么不如从下一位非0的重新开始,因为next 绝对大于 next + cursum
+            if cursum <= 0:
+                cursum = num
+            else:
+                cursum += num
+
+            if cursum > maxsum:
+                maxsum = cursum
         return maxsum
 
 if __name__ == "__main__":
