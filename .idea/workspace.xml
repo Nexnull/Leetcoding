@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ee4bcccc-24fc-4e26-b1cc-9abecaf195ff" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/Array/54. Spiral Matrix.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/Array/Interval/56. Merge Intervals.py" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/Array/Interval/56. Merge Intervals.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/DP/一维/62. Unique Paths(可压缩纬度).py" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/DP/一维/62. Unique Paths(可压缩纬度).py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/Math/基础/66. 数组加一.py" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/Math/基础/66. 数组加一.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/Matrix/54. Spiral Matrix(顺时针打印矩阵).py" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/Matrix/54. Spiral Matrix(顺时针打印矩阵).py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/greedy/55. Jump Game.py" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/greedy/55. Jump Game.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/一些总结/python方法.py" beforeDir="false" afterPath="$PROJECT_DIR$/一些总结/python方法.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/剑指offer/一刷/53.maximun subarray连续子数组的最大和.py" beforeDir="false" afterPath="$PROJECT_DIR$/剑指offer/一刷/53.maximun subarray连续子数组的最大和.py" afterDir="false" />
-    </list>
+    <list default="true" id="ee4bcccc-24fc-4e26-b1cc-9abecaf195ff" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
