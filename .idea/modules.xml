@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../刷题/.idea/刷题.iml" filepath="$PROJECT_DIR$/../刷题/.idea/刷题.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Leetcoding.iml" filepath="$PROJECT_DIR$/.idea/Leetcoding.iml" />
     </modules>
   </component>
 </project>
