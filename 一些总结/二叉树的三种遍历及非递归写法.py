@@ -12,7 +12,7 @@ class TreeNode:
         pre(node.left)
         pre(node.right)
 
-
+    #root left right
     def preOrder(root):
         if root == None:
             return []
@@ -36,6 +36,26 @@ class TreeNode:
         print(node.val)
         pre(node.right)
 
+    def inorderTraversal(self, root):
+        """
+        left root right
+        """
+        res = []
+        stack = []
+
+        cur = root
+        while cur or len(stack) != 0:
+            # 当还有左节点的时候，一直往深处遍历，一遍遍历一遍往stack里放
+            # 因为后放进去的先出来
+            while cur:
+                stack.append(cur)
+                cur = cur.left
+
+            cur = stack.pop(-1)
+            res.append(cur.val)
+            cur = cur.right
+
+        return res
 
     def postorder(node):
         if node == None:
@@ -44,6 +64,29 @@ class TreeNode:
         pre(node.right)
         print(node.val)
 
+    # left right root
+    def postorderTraversal(self, root):
+        """
+        :type root: TreeNode
+        :rtype: List[int]
+        left right root
+        """
+        if not root:
+            return []
+
+        res = []
+        stack = [root]
+
+        while stack:
+            node = stack.pop(-1)
+            res.insert(0, node.val)
+            # left right root
+            # so , we should push right later, so that we can pop right first
+
+            if node.left: stack.append(node.left)
+            if node.right: stack.append(node.right)
+
+        return res
 
 
     if __name__ == "__main__":

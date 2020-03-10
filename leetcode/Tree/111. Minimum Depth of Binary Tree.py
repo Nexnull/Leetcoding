@@ -10,8 +10,11 @@ class Solution(object):
         """
         if not root:
             return 0
+        # 假如说一边是none, 一遍非none,我们要走的是有node的一边，所以取max
         elif not root.left or not root.right:
             return 1 + max(self.minDepth(root.left),self.minDepth(root.right))
+        # 假如说两边都有node, 或者两边都没node
+        # 那么都是取 1 + min
         else:
             return 1 + min(self.minDepth(root.left),self.minDepth(root.right))
 

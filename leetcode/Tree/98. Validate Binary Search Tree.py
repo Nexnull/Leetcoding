@@ -42,7 +42,7 @@ class Solution(object):
         """
         if not root:
             return True
-        self.prevalue = None
+        self.prenode = None
         return self.helper(root)
 
     def helper(self, root):
@@ -52,9 +52,12 @@ class Solution(object):
         if not self.helper(root.left):
             return False
 
-        if self.prevalue and root.val <= self.prevalue.val:
+        #因为是按照左中右的顺序来的，根据BST，我们要保证当前的node的值一定是大于上一个node的
+        #如果违反则说明啥是错了
+        if self.prenode and root.val <= self.prenode.val:
             return False
-        self.prevalue = root
+
+        self.prenode = root
 
         return self.helper(root.right)
 

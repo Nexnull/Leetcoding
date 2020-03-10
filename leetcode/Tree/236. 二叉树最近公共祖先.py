@@ -12,13 +12,20 @@ class Solution(object):
         :rtype: TreeNode
         """
 
+        #找到已经遍历到 p,q的情况， 或者是遍历到None的情况(说明没找到pq)，返回 q,p或者none
         if (not root) or (root == p) or (root == q):
             return root
+
+        #看左子树和右子树有没有找到pq
+        #假如说只有一遍找到的话，被找到的节点肯定是最近公共祖先，因为他最先被找到，且另外一个节点
+        #肯定在它下面
         left = self.lowestCommonAncestor(root.left,p,q)
         right = self.lowestCommonAncestor(root.left,p,q)
 
+        #假如左右子树都找到pq,说明两个节点肯定在一左一右，返回当前root
         if left and right:
             return root
+        #假如说只找到一边，那我们就返回那一边的最上面节点
         return left or right
 
 """   6
