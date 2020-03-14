@@ -32,14 +32,6 @@ class Solution(object):
             pre = a
         return self.next
 
-    def prt(self):
-        print("hello")
-        print(self)
-        a = self
-        a.next = 1
-        print(self.next)
-
-
 
 
 """
