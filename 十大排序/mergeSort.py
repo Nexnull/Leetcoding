@@ -1,4 +1,5 @@
 def merge(arr, l, m, r):
+    # 因为这里的mid的值会往下取一点，所以这里要+1
     n1 = m - l + 1
     n2 = r - m
 
@@ -46,6 +47,7 @@ def mergeSort(arr, l, r):
 
         mergeSort(arr, l, m)
         mergeSort(arr, m + 1, r)
+        print("start", arr[l:r+1])
         merge(arr, l, m, r)
 
 

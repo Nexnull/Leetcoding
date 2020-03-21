@@ -14,16 +14,24 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        low = 0 ; high = len(nums)-1
+        low = 0
+        high = len(nums)-1
+
         while low <= high:
             mid = (low + high)//2
+            # 在这里调整MID的位置，是为后面统一对MID处理做准备，我们统一把MID移动到两个相同数的左边INDEX
             if mid-1 >= 0 and nums[mid-1] == nums[mid]:
                 mid -= 1
-            elif mid+1 < len(nums) and nums[mid+1] == nums[mid]:mid = mid
-            else:return nums[mid]
+            elif mid+1 < len(nums) and nums[mid+1] == nums[mid]:
+                mid = mid
+            else:
+                return nums[mid]
 
-            if (mid-low)%2 == 1: high = mid -1
-            else: low = mid + 2
+            # 通过判断数字左右列表的奇偶性，来判断HIGH LOW的改变
+            if (mid-low) % 2 == 1:
+                high = mid - 1
+            else:
+                low = mid + 2
         return -1
 
 """
