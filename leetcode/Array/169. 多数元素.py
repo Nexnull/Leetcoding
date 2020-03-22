@@ -4,16 +4,6 @@ Given an array of size n, find the majority element. The majority element is the
 You may assume that the array is non-empty and the majority element always exist in the array.
 求众数
 """
-import collections
-class Solution(object):
-    def majorityElement(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
-        count = collections.Counter(nums)
-        return max(count.keys(), key = count.get)
-
 class Solution(object):
     def majorityElement1(self, nums):
         """

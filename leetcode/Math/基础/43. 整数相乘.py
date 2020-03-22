@@ -16,7 +16,9 @@ class Solution(object):
         for i in range(len(num1) - 1, -1, -1):
             for j in range(len(num2) - 1, -1, -1):
                 product = (ord(num1[i]) - ord("0")) * (ord(num2[j]) - ord("0"))
-                phigh = i + j; plow = i + j + 1
+                phigh = i + j
+                plow = i + j + 1
+
                 sum = res[plow] + product
                 res[phigh] += sum // 10
                 res[plow] = sum % 10

@@ -28,11 +28,16 @@ class Solution(object):
         n = len(word2)
 
         dp = [[0 for j in range(n+1)] for i in range(m+1)]
-        for i in range(m+1): dp[i][0] = i
-        for j in range(n+1): dp[0][j] = j
+
+        # 边界值，假如说 "" , "abcd" , 那么dp要进行初始化设定
+        for i in range(m+1):
+            dp[i][0] = i
+        for j in range(n+1):
+            dp[0][j] = j
 
         # 检测出"a",""这种情况
-        if n == 0 or m == 0: return dp[m][n]
+        if n == 0 or m == 0:
+            return dp[m][n]
 
         for i in range(1,m+1):
             for j in range(1,n+1):

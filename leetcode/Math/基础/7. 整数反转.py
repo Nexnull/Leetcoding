@@ -11,17 +11,19 @@ Input: -123
 Output: -321
 """
 def reverse1(self, x):
-    if not x: return x
-    sign = x//abs(x)
-    x *= sign
-    res = 0
-    while x != 0:
-        res = x%10 + res*10
-        x //= 10
+        if not x:
+            return x
 
-    if res >= (1 << 31)-1:
-        return 0
-    return res*sign
+        sign = x//abs(x)
+        x *= sign
+        res = 0
+        while x != 0:
+            res = x%10 + res*10
+            x //= 10
+
+        if res >= (1 << 31)-1:
+            return 0
+        return res*sign
 
 """
 1.首先我们要返回一个数的相反数，我们得确定这个数是（正，负）-sign
