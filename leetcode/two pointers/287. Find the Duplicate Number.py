@@ -23,9 +23,13 @@ class Solution(object):
             mid = (left+right) // 2
             count = 0
             for num in nums:
-                if num <= mid: count += 1
-            if count > mid:right = mid - 1
-            else:left = mid + 1
+                if num <= mid:
+                    count += 1
+
+            if count > mid:
+                right = mid - 1
+            else:
+                left = mid + 1
         return left
 
 """
@@ -53,3 +57,14 @@ class Solution2(object):
             slow = nums[slow]
             fast = nums[fast]
         return slow
+"""
+弗洛伊德的乌龟和兔子（循环检测）
+算法：
+首先，我们可以很容易地证明问题的约束意味着必须存在一个循环。因为 nums 中的每个数字都在 1 和 n 之间
+所以它必须指向存在的索引。此外，由于 0 不能作为 nums 中的值出现，nums[0] 不能作为循环的一部分。
+
+因为假如说每个index上都是对应不同的数字，那么就永远不会产生循环，因为每一次去的都是不同的位置
+但是假如说有两个index上有相同的数字，那么他们则会进入一个循环当中，因为必定会进到同一个位置（重复数字）
+
+链接：https://leetcode-cn.com/problems/find-the-duplicate-number/solution/xun-zhao-zhong-fu-shu-by-leetcode/
+"""
