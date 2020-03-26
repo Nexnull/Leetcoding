@@ -11,12 +11,18 @@ checked[]:用来储存dfs结束的节点，说明这个点开始的路径无环
 节点总数是V，边的总数是E,构造图花费V+E,遍历图也需要V+E
 time(V+E) Space(V+E)
 
+输入: 2, [[1,0],[0,1]]
+输出: false
+解释: 总共有 2 门课程。学习课程 1 之前，你需要先完成​课程 0；并且学习课程 0 之前，你还应先完成课程 1。这是不可能的。
+
+
 """
 #方法1
 class Solution(object):
     def hasCycle(self, graph, visited, checked, v):
         # visited被访问过了，说明有环，返回True
-        if visited[v]: return True
+        if visited[v]:
+            return True
         visited[v] = True
 
         # 判断v路径下的所有节点是否有环

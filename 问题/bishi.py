@@ -10,8 +10,8 @@ if __name__ == "__main__":
             break
         data.append(line)
 
-    for i in range(1,data[0]):
-        data[i][-1] =
+
+
 
 
 
