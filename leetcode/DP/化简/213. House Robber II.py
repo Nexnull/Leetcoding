@@ -12,6 +12,7 @@ class Solution(object):
         if not nums or len(nums) == 0: return 0
         if len(nums) <= 2: return max(nums)
         return max(self.helper(nums[:len(nums)-1]), self.helper(nums[1:]))
+
     # Time: O(n), Space: O(1)
     def helper(self,nums):
         if not nums or len(nums) == 0: return 0
