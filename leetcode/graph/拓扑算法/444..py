@@ -25,7 +25,6 @@ class Solution(object):
                 for val in node[:i]:
                     par[node[i]].add(val)
 
-        # if
 
         print("par", par)
         print("child", child)
