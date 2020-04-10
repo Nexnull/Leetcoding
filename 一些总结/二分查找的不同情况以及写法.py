@@ -59,6 +59,13 @@ def normal_binarysearch2(array, target):
             left += 1
 
     return -1
+"""
+找的到的话，left,right 的数都是不确定的
+找不到的话。left应该在区间的右边，right在区间的左边
+例如：
+[-1,0,3,5,9,12] 找出来,循环结束后，left = 3, right = 2
+4
+"""
 
 # 3
 def normal_binarysearch3(array, target):

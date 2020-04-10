@@ -11,13 +11,14 @@ class Solution(object):
         :type s: List[str]
         :rtype: None Do not return anything, modify s in-place instead.
         """
-        if not s or len(s) == 0: return s
+        if not s or len(s) == 0:
+            return s
 
-        i = 0;
+        i = 0
         j = len(s) - 1
         while i < j:
             s[i], s[j] = s[j], s[i]
-            i += 1;
+            i += 1
             j -= 1
         return s
 

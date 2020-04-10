@@ -16,7 +16,8 @@ class Solution(object):
         p = 0
 
         while p < len(s):
-            while s[p] == " ": p += 1
+            while s[p] == " ":
+                p += 1
             num = 0
             while p < len(s) and "0" <= s[p] <= "9":
                 num = num*10 + (ord(s[p]) - ord("0"))

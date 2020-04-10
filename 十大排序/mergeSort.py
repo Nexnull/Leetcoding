@@ -1,4 +1,5 @@
 def merge(left,right):
+def merge(left,right):
     l = 0
     r = 0
     result = []
@@ -6,6 +7,7 @@ def merge(left,right):
         if left[l] < right[r]:
             result.append(left[l])
             l += 1
+
         else:
             result.append(right[r])
             r += 1
@@ -19,9 +21,11 @@ def mergesort(data):
     if len(data) == 1:
         return data
 
+
     middle = len(data)//2
     left = mergesort(data[:middle])
     right = mergesort(data[middle:])
+
 
     return merge(left,right)
 
