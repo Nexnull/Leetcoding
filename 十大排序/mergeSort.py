@@ -1,55 +1,28 @@
-def merge(arr, l, m, r):
-    n1 = m - l + 1
-    n2 = r - m
-
-    # 创建临时数组
-    L = [0] * (n1)
-    R = [0] * (n2)
-
-    # 拷贝数据到临时数组 arrays L[] 和 R[]
-    for i in range(0, n1):
-        L[i] = arr[l + i]
-
-    for j in range(0, n2):
-        R[j] = arr[m + 1 + j]
-
-        # 归并临时数组到 arr[l..r]
-    i = 0  # 初始化第一个子数组的索引
-    j = 0  # 初始化第二个子数组的索引
-    k = l  # 初始归并子数组的索引
-
-    while i < n1 and j < n2:
-        if L[i] <= R[j]:
-            arr[k] = L[i]
-            i += 1
+def merge(left,right):
+    l = 0
+    r = 0
+    result = []
+    while l<=len(left)-1 and r <= len(right)-1:
+        if left[l] < right[r]:
+            result.append(left[l])
+            l += 1
         else:
-            arr[k] = R[j]
-            j += 1
-        k += 1
+            result.append(right[r])
+            r += 1
 
-    # 拷贝 L[] 的保留元素
-    while i < n1:
-        arr[k] = L[i]
-        i += 1
-        k += 1
-
-    # 拷贝 R[] 的保留元素
-    while j < n2:
-        arr[k] = R[j]
-        j += 1
-        k += 1
+    result += left[l:]
+    result += right[r:]
+    return result
 
 
-def mergeSort(arr, l, r):
-    if l < r:
-        m = (l + r) // 2
+def mergesort(data):
+    if len(data) == 1:
+        return data
 
-        mergeSort(arr, l, m)
-        mergeSort(arr, m + 1, r)
-        merge(arr, l, m, r)
+    middle = len(data)//2
+    left = mergesort(data[:middle])
+    right = mergesort(data[middle:])
 
+    return merge(left,right)
 
-# https://www.runoob.com/python3/python-merge-sort.html
-array = [5,4,3,2,1]
-mergeSort(array,0,len(array)-1)
-print(array)
+mergesort([5,4,3,2,1])
