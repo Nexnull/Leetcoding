@@ -21,10 +21,10 @@ class Solution(object):
         left = self.findDepth(root.left)
         right = self.findDepth(root.right)
 
-        #这一步记录了，经过当前root的最大长度，所以是left + right
+        # 这一步记录了，经过当前root的最大长度，所以是left + right
         self.res = max(self.res, left + right)
 
-        #返回却要返回，从当前root到leaf的最长距离，供left,right使用
+        # 返回却要返回，从当前root到leaf的最长距离，供left,right使用
         return max(left, right) + 1
 
 """
