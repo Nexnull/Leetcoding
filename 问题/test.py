@@ -1,29 +1,65 @@
 import sys
+class TreeNode(object):
+    def __init__(self, x):
+        self.val = x
+        self.left = None
+        self.right = None
+
 
 class Question(object):
-    def question2(self, data):
+    def question2(self, root, n):
 
-        data = sorted(data)
-        self.res = 0
-        print(data)
-        self.helper(data, 1, data[0])
-        print(self.res)
+        self.res = []
+        self.helper(root, n, [])
 
-    def helper(self, data, cur, temp):
-        if cur == len(data)-1:
-            self.res = max(self.res, len(temp))
+        # for _ in range(len(self.res)):
+        #     print(_+1, self.res[_])
+        # print(n ,len(self.res))
+
+        for n in range(1,11):
+            self.helper(root, n, [])
+            print(n ,len(self.res))
+            self.res = []
+
+
+
+
+    def helper(self, root, n, temp):
+        if root.val == "E":
+            if n == 0:
+                if temp not in self.res:
+                    self.res.append(temp + ["E"])
+                return
+            else:
+                return
+
+        if n <= 0:
             return
-        print(temp, data[cur])
-        for i in range(cur, len(data)):
-            if temp[-1] <= data[i][0]:
-                self.helper(data, cur + 1, temp + data[i])
+
+        self.helper(root.left, n - 1, temp + [root.val])
+        self.helper(root.right, n - 1, temp + [root.val])
+
+
 
 
 if __name__ == "__main__":
-    data = ["aaa","befg","bbb","zzz"]
+    A = TreeNode("A")
+    B = TreeNode("B")
+    C = TreeNode("C")
+    D = TreeNode("D")
+    E = TreeNode("E")
+    F = TreeNode("F")
+    G = TreeNode("G")
+    H = TreeNode("H")
+
+    A.left = H; A.right = B
+    B.left = A; B.right = C
+    C.left = B; C.right = D
+    D.left = C; D.right = E
+    E.left = D; E.right = F
+    F.left = E; F.right = G
+    G.left = F; G.right = H
+    H.left = G; H.right = A
 
     question = Question()
-    question.question2(data)
-
-    a = ["aaa","befg","bbb","zzz"]
-    print(sorted(a))
+    question.question2(A, 1)

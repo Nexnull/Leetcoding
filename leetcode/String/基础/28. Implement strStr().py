@@ -6,34 +6,6 @@ Example 1:
 Input: haystack = "hello", needle = "ll"
 Output: 2
 """
-
-class Solution(object):
-    def strStr(self, haystack, needle):
-        """
-        :type haystack: str
-        :type needle: str
-        :rtype: int
-        """
-        if not haystack and needle: return -1
-        if not needle: return 0
-
-        for i in range(len(haystack) - len(needle) + 1):
-            if haystack[i:i + len(needle)] == needle:
-                return i
-
-        return -1
-
-"""
-https://www.youtube.com/watch?v=62lXzTIHTiI
-这个做法比较简单，前期我们只用考虑一些corner case
-
-然后我们要找到在 string1 最早出现的 string2 首字母的index
-所以超出范围的index我们就没必要去遍历了 range(len(haystack) - len(needle) + 1)
-然后就是字符串的成块对比
-找到了返回i
-没找到返回-1
-"""
-
 class Solution(object):
     def strStr(self, haystack, needle):
         """
