@@ -29,6 +29,8 @@ class Solution(object):
         return s[start:start +maxLen]
 
 """
+https://algocasts.io/episodes/VBpLqWD8
+Time: O(n^2), Space: O(1)
 答案：
 1.本体的解体关键函数是 expend函数，他的作用是，给定两个index,会一直对比，看 nums[left] ==? nums[right]
  一直向外扩散
