@@ -18,7 +18,8 @@ class Solution(object):
         :type amount: int
         :rtype: int
         """
-        if coins is None or len(coins) == 0 or amount is None: return -1
+        if coins is None or len(coins) == 0 or amount is None:
+            return -1
 
         dp = [amount+1]*(amount+1)
         dp[0] = 0
@@ -28,7 +29,8 @@ class Solution(object):
                 if coins[j] <= i:
                     dp[i] = min(dp[i], dp[i - coins[j]] + 1)
 
-        if dp[amount] > amount:return -1
+        if dp[amount] > amount:
+            return -1
         return dp[amount]
 
 
@@ -48,5 +50,4 @@ dp就是在每一个数上，我们最少可以迈多少步
 4.注意i 是从1开始遍历，因为0没有遍历的必要，当然这一步有没有问题不大
 5.当硬币值 < amount值我们才可以递归（常理）
 6.最后return 处理一下
-
 """
