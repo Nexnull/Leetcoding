@@ -1,5 +1,5 @@
 """
-Given a reference of a node in a connected undirected graph, return a deep copy (clone) of the graph. Each node in the graph contains a val (int) and a list (List[Node]) of its neighbors
+Given a reference of a node in a connected undirected Graph, return a deep copy (clone) of the Graph. Each node in the Graph contains a val (int) and a list (List[Node]) of its neighbors
 把一个图的节点和边都复制出来
 """
 

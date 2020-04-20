@@ -28,7 +28,7 @@ class Solution(object):
                 new[1] = max(new[1],interval[1])
         res.append(new)
         return res
-5
+
 """
 https://www.youtube.com/watch?v=WBYCD9qluVg
 答案：

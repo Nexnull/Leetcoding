@@ -49,7 +49,7 @@ def BFS(graph , s):
                 seen.add(node)
         print(vertex)
 
-# BFS(graph,"A")
+# BFS(Graph,"A")
 
 
 """
