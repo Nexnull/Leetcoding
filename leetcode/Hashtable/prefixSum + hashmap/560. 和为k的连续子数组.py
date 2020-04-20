@@ -7,7 +7,8 @@ class Solution(object):
         :rtype: int
         """
 
-        prefixSum = collections.defaultdict(int)
+
+        prefixSum = {}
         prefixSum[0] = 1
         Sum = 0
         res = 0
@@ -17,7 +18,7 @@ class Solution(object):
             if (Sum - k) in prefixSum:
                 res += prefixSum[Sum - k]
 
-            prefixSum[Sum] += 1
+            prefixSum[Sum] = prefixSum.get(Sum, 0) + 1
         return res
 
 """

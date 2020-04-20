@@ -16,9 +16,11 @@ class Solution(object):
                 #初始化出现奇数的情况， 例如 bab
                 if i == j:
                     dp[i][j] = True
+
                 #初始化出现偶数的情况， 例如 baab
                 elif i + 1 == j:
                     dp[i][j] = s[i] == s[j]
+
                 # 解决通用情况，i i+1 j-1 j
                 else:
                     dp[i][j] = s[i] == s[j] and dp[i + 1][j - 1]
