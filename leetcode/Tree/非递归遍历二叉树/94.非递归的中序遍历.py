@@ -16,7 +16,7 @@ class Solution(object):
         stack = []
 
         cur = root
-        while cur  or len(stack) != 0:
+        while cur or stack:
             #当还有左节点的时候，一直往深处遍历，一遍遍历一遍往stack里放
             #因为后放进去的先出来
             while cur:
